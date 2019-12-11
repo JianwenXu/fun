@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+
 /**
  * useEffect demo
  * 它跟 class 组件中的 componentDidMount、componentDidUpdate 和 componentWillUnmount 具有相同的用途，只不过被合并成了一个 API.
@@ -16,7 +17,7 @@ const Hook2 = () => {
     // return () => {
 
     // };
-  });
+  }, [ count ]);
 
   // 跟 useState 一样，你可以在组件中多次使用 useEffect
 
