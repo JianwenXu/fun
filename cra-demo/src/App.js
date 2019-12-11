@@ -1,5 +1,5 @@
 import React from 'react';
-import Hook from './components/Hooks/Hook1';
+import Hook from './components/Hooks/Hook2';
 import './App.css';
 
 
