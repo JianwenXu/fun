@@ -1,12 +1,12 @@
 import React from 'react';
-import Button from './components/Button';
+import Hook from './components/Hooks/Hook1';
 import './App.css';
 
 
 function App() {
   return (
     <div className="App">
-      <Button>你好</Button>
+      <Hook />
     </div>
   );
 }
