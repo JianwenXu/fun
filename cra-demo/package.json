@@ -20,7 +20,8 @@
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "electron-start": "electron ."
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -43,6 +44,7 @@
     "@storybook/addons": "^5.2.8",
     "@storybook/react": "^5.2.8",
     "dog-names": "^2.0.0",
+    "electron": "^7.1.7",
     "react-styleguidist": "^10.2.1"
   }
 }
