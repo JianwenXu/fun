@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>获取IP</title>
+	<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+</head>
+<body>
+	<h3>
+		获取本机IP:
+		<span id="cip"></span>
+	</h3>
+	<p id="cname"></p>
+	<script type="text/javascript">
+		var cipEle = document.getElementById('cip');
+		var cnameEle = document.getElementById('cname');
+		cipEle.innerHTML = returnCitySN["cip"];
+		cnameEle.innerHTML = returnCitySN["cname"];
+		console.log('测试 ', returnCitySN);
+	</script>
+</body>
+</html>

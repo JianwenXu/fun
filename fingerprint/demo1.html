@@ -4,18 +4,23 @@
 	<meta charset="UTF-8">
 	<title>figureprint2 demo</title>
 	<!-- <script src="https://cdn.bootcss.com/fingerprintjs2/2.1.0/fingerprint2.js"></script> -->
-	<<script src="fingerprint2.js" type="text/javascript" charset="utf-8"></script>
+	<script src="fingerprint2.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 	fingerprint2 demo
 	<script type="text/javascript" charset="utf-8" async defer>
+		var start = +new Date();
+		console.log('页面加载完成', +new Date());
 		if (window.requestIdleCallback) {
 		    requestIdleCallback(function () {
+		    		var middle = +new Date();
 		        Fingerprint2.get(function (components) {
 		        	var values = components.map(function (component) { return component.value })
 					    var murmur = Fingerprint2.x64hash128(values.join(''), 31)
-					    console.log('打印 hash 值', murmur);
+					    console.log('hash 值', murmur);
 		          console.log(components) // an array of components: {key: ..., value: ...}
+		          var end = +new Date();
+		          console.log('生成指纹耗时', end - start, end - middle);
 		        })
 		    })
 		} else {
